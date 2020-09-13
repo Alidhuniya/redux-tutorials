@@ -11,6 +11,12 @@ const counterReducer = (state = initState, action) => {
             case counterTypes.DECREMENT:
                 return state - 1;
 
+                case counterTypes.INCREMENTN:
+                    return state + action.payload;
+
+                    case counterTypes.DECREMENTN:
+                        return state - action.payload;
+
                 default: return state;
     }
 };
