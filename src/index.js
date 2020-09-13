@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { createStore } from 'redux';
+import store from "./redux";
+import {Provider} from "react-redux";
 
+/*
 // action
 const increment = () => {
   return {
@@ -46,9 +48,13 @@ store.dispatch(increment());
 store.dispatch(increment());
 store.dispatch(decrement());
 
+*/
+
 ReactDOM.render(
   <React.StrictMode>
+  <Provider store = {store}>
     <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
